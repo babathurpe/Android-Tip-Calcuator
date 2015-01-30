@@ -1,0 +1,308 @@
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:id="@+id/gridLayout"
+    android:columnCount="9"
+    android:useDefaultMargins="true"
+    android:rowCount="9">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/amount"
+        android:id="@+id/amountTextView"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:gravity="right"
+        android:layout_gravity="fill_horizontal"
+        android:padding="8dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="33dp"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/amountEditText"
+        android:layout_row="0"
+        android:layout_column="1"
+        android:labelFor="@id/amountTextView"
+        android:maxLength="6"
+        android:digits="0123456789"
+        android:background="@android:color/holo_blue_bright"
+        android:height="33dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/peopleCount"
+        android:id="@+id/peopleCountTextView"
+        android:layout_row="1"
+        android:layout_column="0"
+        android:gravity="right"
+        android:layout_gravity="fill_horizontal"
+        android:padding="8dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="33dp"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/peopleCountEditText"
+        android:layout_row="1"
+        android:layout_column="1"
+        android:labelFor="@id/amountTextView"
+        android:maxLength="6"
+        android:digits="0123456789"
+        android:background="@android:color/holo_blue_bright"
+        android:height="33dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/custom_tip_percentage"
+        android:id="@+id/customTipTextView"
+        android:layout_row="2"
+        android:layout_column="0"
+        android:gravity="center_vertical|right"
+        android:layout_gravity="fill_horizontal" />
+
+    <SeekBar
+        android:layout_width="197dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/customTipSeekBar"
+        android:layout_row="2"
+        android:layout_column="1"
+        android:labelFor="@id/customTipTextView"
+        android:max="30"
+        android:progress="15"
+        android:maxWidth="30sp"
+        android:maxHeight="20sp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_row="3"
+        android:layout_column="1"
+        android:id="@+id/percentLinearLayout"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/fifteen_percent"
+            android:id="@+id/percent15TextView"
+            android:layout_weight="0.47"
+            android:gravity="center"
+            android:height="33dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/eighteen_percent"
+            android:id="@+id/percentCustomTextView"
+            android:layout_weight="0.61"
+            android:gravity="center"
+            android:height="33dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_row="4"
+        android:layout_column="1"
+        android:id="@+id/tipLinearLayout">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/tipTextView"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:width="0dp"
+        android:height="33dp"
+        android:text="@string/tip"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_red_dark" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/tipBeforeTax"
+        android:id="@+id/tipBeforeTaxTextView"
+        android:layout_row="5"
+        android:layout_column="0"
+        android:gravity="right"
+        android:layout_gravity="fill_horizontal" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_row="5"
+        android:layout_column="1"
+        android:id="@+id/tipBeforeTaxLinearLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/tip15BeforeTaxTextView"
+            android:background="@android:color/holo_orange_light"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:width="0dp"
+            android:height="33dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="33dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/tipCustomBeforeTaxTextView"
+            android:background="@android:color/holo_orange_light"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:width="0dp"
+            android:height="33dp" />
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/tipAfterTax"
+        android:id="@+id/tipAfterTaxTextView"
+        android:layout_row="6"
+        android:layout_column="0"
+        android:gravity="right"
+        android:layout_gravity="fill_horizontal" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_row="6"
+        android:layout_column="1"
+        android:id="@+id/tipAfterTaxLinearLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/tip15AfterTaxTextView"
+            android:background="@android:color/holo_orange_light"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:width="0dp"
+            android:height="33dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="33dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/tipCustomAfterTaxTextView"
+            android:background="@android:color/holo_orange_light"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:width="0dp"
+            android:height="33dp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/total"
+        android:id="@+id/totalTextView"
+        android:layout_row="7"
+        android:layout_column="0"
+        android:gravity="right"
+        android:layout_gravity="fill_horizontal" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_row="7"
+        android:layout_column="1"
+        android:id="@+id/totalLinearLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/total15TextView"
+            android:background="@android:color/holo_orange_light"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:width="0dp"
+            android:height="33dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/totalCustomTextView"
+            android:background="@android:color/holo_orange_light"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:width="0dp"
+            android:height="33dp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/totalEach"
+        android:id="@+id/totalEachTextView"
+        android:layout_row="8"
+        android:layout_column="0"
+        android:gravity="right"
+        android:layout_gravity="fill_horizontal" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_row="8"
+        android:layout_column="1"
+        android:id="@+id/totalEachLinearLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/total15EachTextView"
+            android:background="@android:color/holo_orange_light"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:width="0dp"
+            android:height="33dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/totalCustomEachTextView"
+            android:background="@android:color/holo_orange_light"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:width="0dp"
+            android:height="33dp" />
+    </LinearLayout>
+</GridLayout>
